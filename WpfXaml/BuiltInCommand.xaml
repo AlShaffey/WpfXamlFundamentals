@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfXaml.BuiltInCommand"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="BuiltInCommand" Height="300" Width="1450" Left="45"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <StackPanel>
+                <Button x:Name="button" Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Command="ApplicationCommands.Copy"/>
+                <Button x:Name="button1" Content="Paste" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Command="ApplicationCommands.Paste"/>
+            </StackPanel>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            A couple of buttons, each is associated with Application cacommand, with providing a handler on the Window context to one of them to enable it, that prints debug message, and disable handling the command by falagging can execute to false in can execute handler.
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

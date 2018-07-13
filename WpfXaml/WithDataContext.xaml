@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfXaml.WithDataContext"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfXaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="900"
+      Title="WithDataContext"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Name="labelName" Margin="3" Target="{Binding ElementName=textBoxName}">_Name</Label>
+                <TextBox Name="textBoxName" Margin="3" Grid.Column="1" Text="{Binding Name}"></TextBox>
+                <Label Name="labelAge" Margin="3" Grid.Row="1" Target="{Binding ElementName=textBoxAge}">_Age</Label>
+                <TextBox Name="textBoxAge" Margin="3" Grid.Row="1" Grid.Column="1" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+                    <Button Content="_Show" Margin="3" Click="Button_Click"></Button>
+                    <Button Content="_Change Age" Margin="3" Click="Button_Click_1"></Button>
+                    <Button Content="_Change Name" Click="Button_Click_2" Margin="3"></Button>
+                </StackPanel>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Binding without specifying the Path property, which means that implicitly the ZAML is using the constructor argument instead of the property value.</TextBlock>
+                <TextBlock>An object is used as a data source.</TextBlock>
+                <TextBlock>The UI is consisting of a 2 labeled text boxes and 3 buttons.</TextBlock>
+                <TextBlock>Data source object is provided to the window data context in code behind, where the context can be any element.</TextBlock>
+                <TextBlock>Default binding type for TextBox is Two Way, Show button is used to indicate this after changing the textbox values.</TextBlock>
+                <TextBlock>The age textbox data source update trigger is changed from the default of Lost Focus to Property Changed.</TextBlock>
+                <TextBlock>The Change Age button is here to change the data source object Age property per each click.</TextBlock>
+                <TextBlock>The button Change Age, triggers the Age textbox to update its value explicitly after changing the data source property value.</TextBlock>
+                <TextBlock>The button Change Name, triggers the Name text box to update its value with INotifyPropertChange after changing the data source property value.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

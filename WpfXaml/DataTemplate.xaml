@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfXaml.DataTemplate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfXaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="600"
+      Title="DataTemplate"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:Person}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Name="labelName" Margin="3" Target="{Binding ElementName=textBoxName}">_Name</Label>
+                <TextBox Name="textBoxName" Margin="3" Grid.Column="1" Text="{Binding Name}"></TextBox>
+                <Label Name="labelAge" Margin="3" Grid.Row="1" Target="{Binding ElementName=textBoxAge}">_Age</Label>
+                <TextBox Name="textBoxAge" Margin="3" Grid.Row="1" Grid.Column="1" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--<Button Content="{Binding}"></Button>
+        <ContentControl Content="{Binding}"></ContentControl>-->
+                <ListBox ItemsSource="{Binding}"></ListBox>
+                <StackPanel Grid.Row="1">
+                    <Button Content="_Show" Margin="3" Click="Button_Click"></Button>
+                    <Button Content="_Change Age" Margin="3" Click="Button_Click_1"></Button>
+                </StackPanel>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Uses Data Template to present different person instances multiple times in a similar way.</TextBlock>
+                <TextBlock>A grid as a data template is designed to display any list of person objects.</TextBlock>
+                <TextBlock>The data template is written using XAML with data binding expressions in it.</TextBlock>
+                <TextBlock>The data template is put in the Windows.Resources collection.</TextBlock>
+                <TextBlock>A list box is used to display the list of the bound persons to the context.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfXaml.MoreItemControls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="MoreItemControls" Height="300" Width="300"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <StackPanel>
+                <Menu x:Name="menu" Height="100">
+                    <MenuItem Header="_File">
+                        <MenuItem Header="_New"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_Edit">
+                    </MenuItem>
+                    <MenuItem Header="F_ormat">
+                    </MenuItem>
+                </Menu>
+                <TabControl x:Name="tabControl" Height="100">
+                    <TabItem Header="One">
+                        <StackPanel Background="#FFE5E5E5">
+                            <TextBlock>One Content</TextBlock>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Two">
+                        <StackPanel Background="#FFE5E5E5">
+                            <TextBlock>Two Content</TextBlock>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+                <ToolBar x:Name="toolBar">
+                    <Button>Save</Button>
+                    <Button>Add</Button>
+                    <Button>Delete</Button>
+                    <Button>Edit</Button>
+                    <Button>Inseret</Button>
+                    <Button>New</Button>
+                    <Button>Where</Button>
+                    <Button>Hide</Button>
+                </ToolBar>
+            </StackPanel>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <TextBlock Text="Menu, Tab control, and Tool Bar."></TextBlock>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

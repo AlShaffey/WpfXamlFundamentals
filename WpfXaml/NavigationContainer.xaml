@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfXaml.NavigationContainer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="NavigationContainer" Height="300" Width="500"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Frame Source="Navigation.xaml"></Frame>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A window that contains a frame that loads a page.</TextBlock>
+                <TextBlock>The loaded page navigates to another one via a hyperlink.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

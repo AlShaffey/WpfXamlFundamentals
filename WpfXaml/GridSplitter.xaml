@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfXaml.GridSplitter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="GridSplitter" Height="600" Width="1200"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" 
+                              VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1">
+                </GridSplitter>
+
+                <Button Grid.Row="0" Grid.Column="0" Margin="7">m.2</Button>
+                <Button Grid.Row="0" Grid.Column="1" Margin="7">m.2</Button>
+                <Button Grid.Row="0" Grid.Column="2" Margin="7">m.2</Button>
+                <Button Grid.Row="1" Grid.Column="0" Margin="7">m.2</Button>
+                <Button Grid.Row="1" Grid.Column="1" Margin="7">m.2</Button>
+                <Button Grid.Row="1" Grid.Column="2" Margin="7">m.2</Button>
+                <Button Grid.Row="2" Grid.Column="0">m.2</Button>
+                <Button Grid.Row="2" Grid.Column="1">m.2</Button>
+                <Button Grid.Row="2" Grid.Column="2">m.2</Button>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A Gridsplitter inside the grid.</TextBlock>
+                <TextBlock>At column 0 and row 1.</TextBlock>
+                <TextBlock>Spans the whole 3 columns.</TextBlock>
+                <TextBlock>Of a stretch horizontal alignment.</TextBlock>
+                <TextBlock>And a top vertical alignment.</TextBlock>
+                <TextBlock>In general, all the windows and pages are having a Master Page like-control that consists of a grid of 2 rows, one for the content and the other for the description, splitted by a gridsplitter.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

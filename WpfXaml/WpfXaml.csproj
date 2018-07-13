@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8B062F4-1B6D-4453-9817-04107C9A153D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfXaml</RootNamespace>
+    <AssemblyName>WpfXaml</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Allignment.xaml.cs">
+      <DependentUpon>Allignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animation.xaml.cs">
+      <DependentUpon>Animation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingToCollection.xaml.cs">
+      <DependentUpon>BindingToCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BuiltInCommand.xaml.cs">
+      <DependentUpon>BuiltInCommand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Canvas.xaml.cs">
+      <DependentUpon>Canvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentAlignment.xaml.cs">
+      <DependentUpon>ContentAlignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataProviders.xaml.cs">
+      <DependentUpon>DataProviders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSourceAsResource.xaml.cs">
+      <DependentUpon>DataSourceAsResource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTemplate.xaml.cs">
+      <DependentUpon>DataTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTemplateTriggers.xaml.cs">
+      <DependentUpon>DataTemplateTriggers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.xaml.cs">
+      <DependentUpon>Default.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventRouting.xaml.cs">
+      <DependentUpon>EventRouting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExplicitDataSource.xaml.cs">
+      <DependentUpon>ExplicitDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExplicitDataSourceAsResource.xaml.cs">
+      <DependentUpon>ExplicitDataSourceAsResource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grid.xaml.cs">
+      <DependentUpon>Grid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridSplitter.xaml.cs">
+      <DependentUpon>GridSplitter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HierarchicalDataBinding.xaml.cs">
+      <DependentUpon>HierarchicalDataBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemContainers.xaml.cs">
+      <DependentUpon>ItemContainers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemControls.xaml.cs">
+      <DependentUpon>ItemControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Margin.xaml.cs">
+      <DependentUpon>Margin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetails.xaml.cs">
+      <DependentUpon>MasterDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterControl.cs" />
+    <Compile Include="MenusAndCommands.xaml.cs">
+      <DependentUpon>MenusAndCommands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoreItemControls.xaml.cs">
+      <DependentUpon>MoreItemControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation.xaml.cs">
+      <DependentUpon>Navigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationContainer.xaml.cs">
+      <DependentUpon>NavigationContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationTo.xaml.cs">
+      <DependentUpon>NavigationTo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Padding.xaml.cs">
+      <DependentUpon>Padding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels.xaml.cs">
+      <DependentUpon>Panels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PeopleSource.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="RangeControls.xaml.cs">
+      <DependentUpon>RangeControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollViewer.xaml.cs">
+      <DependentUpon>ScrollViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TextInput.xaml.cs">
+      <DependentUpon>TextInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TileBrush.xaml.cs">
+      <DependentUpon>TileBrush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transformability.xaml.cs">
+      <DependentUpon>Transformability.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transforms.xaml.cs">
+      <DependentUpon>Transforms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBox.xaml.cs">
+      <DependentUpon>ViewBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WithDataContext.xaml.cs">
+      <DependentUpon>WithDataContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XmlNamespaces.xaml.cs">
+      <DependentUpon>XmlNamespaces.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Allignment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingToCollection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuiltInCommand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Canvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContentAlignment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataProviders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataSourceAsResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataTemplateTriggers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Default.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventRouting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExplicitDataSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExplicitDataSourceAsResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridSplitter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupingControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HierarchicalDataBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Integration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemContainers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Margin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MasterDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenusAndCommands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoreItemControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NavigationTo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Padding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadioButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RangeControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScrollViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SimpleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls.xaml.cs">
+      <DependentUpon>Controls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Designers.xaml.cs">
+      <DependentUpon>Designers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupingControls.xaml.cs">
+      <DependentUpon>GroupingControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Integration.xaml.cs">
+      <DependentUpon>Integration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RadioButtons.xaml.cs">
+      <DependentUpon>RadioButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleButton.xaml.cs">
+      <DependentUpon>SimpleButton.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="TextInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TileBrush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transformability.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transforms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WithDataContext.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XmlNamespaces.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

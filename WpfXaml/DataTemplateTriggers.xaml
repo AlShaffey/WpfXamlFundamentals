@@ -1,0 +1,79 @@
+﻿<Window x:Class="WpfXaml.DataTemplateTriggers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="DataTemplateTriggers" Height="600" Width="1200">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:Person}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Name="labelName" Margin="3" Target="{Binding ElementName=textBoxName}">_Name</Label>
+                <TextBox Name="textBoxName" Margin="3" Grid.Column="1" Text="{Binding Name}"></TextBox>
+                <Label Name="labelAge" Margin="3" Grid.Row="1" Target="{Binding ElementName=textBoxAge}">_Age</Label>
+                <TextBox Name="textBoxAge" Margin="3" Grid.Row="1" Grid.Column="1" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </Grid>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Name}" Value="">
+                    <Setter TargetName="labelName" Property="Background" Value="Orange"></Setter>
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="textBoxName"
+                                                Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)"
+                                                To="Brown" Duration="0:0:1.5"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="textBoxName"
+                                                Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)"
+                                                Duration="0:0:1.5"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Window.Resources>
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--<Button Content="{Binding}"></Button>
+        <ContentControl Content="{Binding}"></ContentControl>-->
+                <ListBox ItemsSource="{Binding}"></ListBox>
+                <StackPanel Grid.Row="1">
+                    <Button Content="_Show" Margin="3" Click="Button_Click"></Button>
+                    <Button Content="_Change Age" Margin="3" Click="Button_Click_1"></Button>
+                </StackPanel>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Uses a data trigger that watches the resource object's name property.</TextBlock>
+                <TextBlock>The trigger contains a setter which targets the element named labelName.</TextBlock>
+                <TextBlock>The trigger will change that element background property to Orange whenever the trigger is applied (name is empty).</TextBlock>
+                <TextBlock>The trigger has an enter action which begins a storyboard when the trigger is applied.</TextBlock>
+                <TextBlock>The enter action has a single animation (color animation), which targets the name text box, and its background color property, that is get animated over a 1.5 sec to Brown.</TextBlock>
+                <TextBlock>An exit action is added as a second animation, that animates back the name text box background color to its Base value, by specifying nothing to the "To" property.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

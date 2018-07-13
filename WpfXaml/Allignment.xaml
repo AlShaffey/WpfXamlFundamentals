@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfXaml.Allignment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Allignment" Height="300" Width="640"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid Height="200">
+                <Button>m.2</Button>
+                <Button HorizontalAlignment="Left">m.2</Button>
+                <Button VerticalAlignment="Top">m.2</Button>
+                <Button HorizontalAlignment="Center">m.2</Button>
+                <Button VerticalAlignment="Center">m.2</Button>
+                <Button HorizontalAlignment="Right">m.2</Button>
+                <Button VerticalAlignment="Bottom">m.2</Button>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            Different horizontal (default{stretch}, left, center, right) and vertical (top, center, bottom) alignment configurations.
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

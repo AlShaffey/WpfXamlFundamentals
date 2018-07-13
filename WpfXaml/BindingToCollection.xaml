@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfXaml.BindingToCollection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="BindingToCollection" Height="600" Width="900">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <ListBox ItemsSource="{x:Static Fonts.SystemFontFamilies}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type FontFamily}">
+                            <TextBlock Text="{Binding}" FontFamily="{Binding}"></TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Listbox item source is pointing to a static property.</TextBlock>
+                <TextBlock>The static property is the SystemFontFamilies defined in the Font class that returns a collection.</TextBlock>
+                <TextBlock>Uses an inline data template style, local to the list box.</TextBlock>
+                <TextBlock>Binding is done to non-text properties, where the Text Block Font Family property is bound to the source object itself, which is a Font Family itself.</TextBlock>
+                <TextBlock>So, the List Box will show each row in the specified font.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfXaml.Grid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Grid" Height="630" Width="630"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30*"></RowDefinition>
+                    <RowDefinition Height="10.9*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7, 7, 0, 0">m.2</Button>
+                <Button Grid.Row="0" Grid.Column="1" FontSize="35">m.2</Button>
+                <Button Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">m.2</Button>
+                <Button Grid.Row="1" Grid.Column="0" Margin="7">m.2</Button>
+                <Button Grid.Row="1" Grid.Column="1">m.2</Button>
+                <Button Grid.Row="1" Grid.Column="2">m.2</Button>
+                <Button Grid.Row="2" Grid.Column="0">m.2</Button>
+                <Button Grid.Row="2" Grid.Column="1">m.2</Button>
+                <Button Grid.Row="2" Grid.Column="2">m.2</Button>
+                <Button Grid.Row="3" Grid.Column="0">m.2</Button>
+                <Button Grid.Row="3" Grid.Column="1">m.2</Button>
+                <Button Grid.Row="3" Grid.Column="2">m.2</Button>
+                <Ellipse Grid.Row="0" Grid.Column="2" Fill="Orange" Height="15" Width="30"></Ellipse>
+                <Ellipse Grid.Row="1" Grid.Column="1" Fill="RED" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                    <TextBlock>Grid rows and columns are assigned as attached properties to the buttons.</TextBlock>
+                    <TextBlock>The Height of row 0 is sized to content (the tallest child [0, 1]).</TextBlock>
+                    <TextBlock>Alignment options are used to position the buttons inside the cells [0, 2].</TextBlock>
+                    <TextBlock>Alignment and Margin options are used to position the buttons inside the cells [0, 1].</TextBlock>
+                    <TextBlock>Margin options are used to position the buttons inside the cells [1, 0], with unconstrained size.</TextBlock>
+                    <TextBlock>Row 1 is of fixed height.</TextBlock>    
+                    <TextBlock>Rows 2 and 3 are sharing out the available space.</TextBlock>
+                    <TextBlock>Height is shared between rows 1 and 2 using proportional Start Sizing.</TextBlock>
+                    <TextBlock>Cell [0, 2] is shared between 2 a button and the the orange ellipse.</TextBlock><TextBlock>Cell [0, 2] is shared between 2 a button and the the orange ellipse.</TextBlock>
+                    <TextBlock>The red ellipse spans multiple horizontal and vertical cells.</TextBlock>
+                    <TextBlock>Grid rows share the whole width.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfXaml.TileBrush"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfXaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="TileBrush"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="D:\m.2\BookLibrary\John Schember\Quick Start Guide (1)\cover.jpg"
+                        Viewbox="0, 0, 30000, 30000" ViewboxUnits="Absolute"
+                        Viewport="0, 0, .25, .25" TileMode="Flipxy"></ImageBrush>
+                </Grid.Background>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Tile Brush is the base class of all composite brushes.</TextBlock>
+                <TextBlock>An Image Brush is used to paint the grid background.</TextBlock>
+                <TextBlock>View Box is used to change the region of interest in the source material.</TextBlock>
+                <TextBlock>View Box units is configured to be Absolute to work on the original bitmap coordinates (pixels).</TextBlock>
+                <TextBlock>The viewport is used to specify where the source material is projected on the target.</TextBlock>
+                <TextBlock>The area that is being painted in the target is reduced to the quarter.</TextBlock>
+                <TextBlock>Tile mode is set to FlipXY, so that, the image will be repeated to fill the entire space, and will be flipped in both x and y directions.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

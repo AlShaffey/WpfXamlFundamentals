@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfXaml.Integration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Integration" HorizontalAlignment="Center" VerticalAlignment="Center"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel>
+                        <Rectangle Fill="AliceBlue" Width="70" Height="7"></Rectangle>
+                        <TextBlock FontSize="35"><Italic>Integration!</Italic></TextBlock>
+                        <Rectangle Fill="Blue" Width="70" Height="35"></Rectangle>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            Integration: HTML, WIN32, Flash, and DirectX.
+            e.g. button element with "Italic" markup and graphics, etc...
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

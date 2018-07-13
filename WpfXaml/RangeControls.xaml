@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfXaml.RangeControls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="RangeControls" Height="300" Width="300"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <StackPanel>
+                <Slider x:Name="slider" Value="7" Minimum="1" Maximum="10" Orientation="Horizontal"/>
+                <ProgressBar Height="10" Value="12" Minimum="1" Maximum="50" Orientation="Horizontal"/>
+                <ScrollBar x:Name="scrollBar" Width="Auto" Value="15" Minimum="1" Maximum="100" Orientation="Vertical" Height="100"/>
+            </StackPanel>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <TextBlock Text="Slider, Progress bar, and scroll bar."></TextBlock>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

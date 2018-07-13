@@ -1,0 +1,74 @@
+﻿<Window x:Class="WpfXaml.Default"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Default" Height="300" Width="300"
+        WindowState="Maximized">
+    <DockPanel>
+        <StackPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Introduction to WPF">
+                    <MenuItem Header="Integration" x:Name="Integration" Click="Integration_Click"></MenuItem>
+                    <MenuItem Header="Designers" x:Name="Designers" Click="Designers_Click"></MenuItem>
+                    <MenuItem Header="Controls" x:Name="Controls" Click="Controls_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Controls" Foreground="Black">
+                    <MenuItem Header="Grouping Controls" x:Name="GroupingControls" Click="GroupingControls_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Text Input" x:Name="TextInput" Click="TextInput_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Range Controls" x:Name="RangeControls" Click="RangeControls_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Item Controls" x:Name="ItemControls" Click="ItemControls_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="More Item Controls" x:Name="MoreItemControls" Click="MoreItemControls_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Item Containers" x:Name="ItemContainers" Click="ItemContainers_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Event Routing" x:Name="EventRouting" Click="EventRouting_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Built In Commands" x:Name="BuiltInCommands" Click="BuiltInCommands_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Menus and Commands" x:Name="MenusAndCommands" Click="MenusAndCommands_Click"  Foreground="Black"></MenuItem> 
+                </MenuItem>
+                <MenuItem Header="Layout" Foreground="Black">
+                    <MenuItem Header="Margin" x:Name="Margin" Click="Margin_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Padding" x:Name="Padding" Click="Padding_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Allignment" x:Name="Allignment" Click="Allignment_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Content Alignment" x:Name="ContentAlignment" Click="ContentAlignment_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Grid" x:Name="Grid" Click="Grid_Click"  Foreground="Black"></MenuItem>
+                    <MenuItem Header="Gridsplitter" x:Name="GridSplitter" Click="GridSplitter_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Canvas" x:Name="Canvas" Click="Canvas_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Scrollviewer" x:Name="Scrollviewer" Click="Scrollviewer_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="View Box" x:Name="ViewBox" Click="ViewBox_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Navigation" x:Name="Navigation" Click="Navigation_Click" Foreground="Black"></MenuItem>
+                 </MenuItem>
+                <MenuItem Header="Graphics" Foreground="Black">
+                    <MenuItem Header="Transformability" x:Name="Transformability" Click="Transformability_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Tile Brush" x:Name="TileBrush" Click="TileBrush_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Transforms" x:Name="Transforms" Click="Transforms_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Animation" x:Name="Animation" Click="Animation_Click" Foreground="Black"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Data Binding" Foreground="Blue">
+                    <MenuItem Header="Explicit Data Source" x:Name="ExplicitDataSource" Click="ExplicitDataSource_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Explicit Data Source As Resource" x:Name="ExplicitDataSourceAsResource" Click="ExplicitDataSourceAsResource_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="With Data Context" x:Name="WithDataContext" Click="WithDataContext_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Data Templates" x:Name="DataTemplate" Click="DataTemplate_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Data Template Triggers" x:Name="DataTemplateTriggers" Click="DataTemplateTriggers_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Binding to a collection" x:Name="BindingToCollection" Click="BindingToCollection_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Master Detail" x:Name="MasterDetail" Click="MasterDetail_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Hierarchical Data Binding" x:Name="HierarchicalDataBinding" Click="HierarchicalDataBinding_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Data Providers" x:Name="DataProviders" Click="DataProviders_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="XML Namespaces" x:Name="XmlNamespaces" Click="XmlNamespaces_Click" Foreground="Black"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Core Types" Foreground="Red">
+                </MenuItem>
+                <MenuItem Header="Templates" Foreground="Red">
+                </MenuItem>
+                <MenuItem Header="Resources" Foreground="Red">
+                </MenuItem>
+                <MenuItem Header="Text" Foreground="Red">
+                </MenuItem>
+            </Menu>
+            <TextBlock>
+            <Hyperlink NavigateUri="https://app.pluralsight.com/library/courses/wpf-fundamentals/table-of-contents" RequestNavigate="Hyperlink_RequestNavigate">
+                WPF and XAML Fundamentals
+            </Hyperlink></TextBlock>
+        </StackPanel>
+    </DockPanel>
+</Window>

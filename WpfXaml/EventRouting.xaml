@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfXaml.EventRouting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="EventRouting" Height="400" Width="500" Name="window"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Border Name="border"  Margin="14" Padding="14" Background="Transparent">
+                <StackPanel Name="panel" Background="Transparent">
+                    <Ellipse Name="ellipse" Fill="Aqua" Height="28"></Ellipse>
+                    <Rectangle Name="Rectangle" Fill="Azure" Height="28"></Rectangle>
+                </StackPanel>
+            </Border>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <TextBlock>Tunneling, Bubbling, and Direct routing.
+                        <LineBreak/>
+                        Disabling bubbling routing.
+                        <LineBreak/>
+                        Removing the background, with keeping the event routing behavior.
+                        <LineBreak/>
+                        Handling multiple chidren click event, in a centralized way on the parent container.
+                        <LineBreak/>
+                        Attaching click event to a stack panel.
+                        </TextBlock>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

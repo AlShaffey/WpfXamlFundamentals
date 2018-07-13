@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfXaml.ExplicitDataSourceAsResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="ExplicitDataSourceAsResource" Height="300" Width="900"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.Resources>
+                    <s:String x:Key="val">Foo</s:String>
+                </Grid.Resources>
+                <StackPanel>
+                    <TextBlock Text="{Binding Source={StaticResource val}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=Length, Source={StaticResource val}}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Single data source object, that is used by multiple bindings.</TextBlock>
+                <TextBlock>The data source object is put in the Resources section.</TextBlock>
+                <TextBlock>Two text block objects that are bound to that single resource data source.</TextBlock>
+                <TextBlock>The 1st one does not have a path, it is bound to the whole data source object, which logical in this case, because it is already a string object.</TextBlock>
+                <TextBlock>The 2nd one is bound using a Path property to the resouce data source value length propert.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
