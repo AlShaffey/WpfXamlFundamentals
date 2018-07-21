@@ -246,5 +246,11 @@ namespace WpfXaml
             var xmlNamespaces = new XmlNamespaces();
             xmlNamespaces.Show();
         }
+
+        private void CollectionViews_Click(object sender, RoutedEventArgs e)
+        {
+            var collectionViews = new CollectionViews();
+            collectionViews.Show();
+        }
     }
 }

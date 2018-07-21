@@ -72,6 +72,9 @@
     <Compile Include="Canvas.xaml.cs">
       <DependentUpon>Canvas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CollectionViews.xaml.cs">
+      <DependentUpon>CollectionViews.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ContentAlignment.xaml.cs">
       <DependentUpon>ContentAlignment.xaml</DependentUpon>
     </Compile>
@@ -188,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Canvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CollectionViews.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

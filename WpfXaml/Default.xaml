@@ -55,6 +55,7 @@
                     <MenuItem Header="Hierarchical Data Binding" x:Name="HierarchicalDataBinding" Click="HierarchicalDataBinding_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Data Providers" x:Name="DataProviders" Click="DataProviders_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="XML Namespaces" x:Name="XmlNamespaces" Click="XmlNamespaces_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Collection Views" x:Name="CollectionViews" Click="CollectionViews_Click"  Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Core Types" Foreground="Red">
                 </MenuItem>
