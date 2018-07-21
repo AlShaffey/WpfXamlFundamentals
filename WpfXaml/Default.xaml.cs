@@ -252,5 +252,11 @@ namespace WpfXaml
             var collectionViews = new CollectionViews();
             collectionViews.Show();
         }
+
+        private void WritingDataSources_Click(object sender, RoutedEventArgs e)
+        {
+            var writingDataSources = new WritingDataSources();
+            writingDataSources.Show();
+        }
     }
 }

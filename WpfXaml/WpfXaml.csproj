@@ -171,6 +171,9 @@
     <Compile Include="WithDataContext.xaml.cs">
       <DependentUpon>WithDataContext.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WritingDataSources.xaml.cs">
+      <DependentUpon>WritingDataSources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XmlNamespaces.xaml.cs">
       <DependentUpon>XmlNamespaces.xaml</DependentUpon>
     </Compile>
@@ -370,6 +373,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WithDataContext.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WritingDataSources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
