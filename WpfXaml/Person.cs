@@ -21,6 +21,7 @@ namespace WpfXaml
                 if (_age != value)
                 {
                     _age = value;
+                    OnPropertChanged(nameof(Age));
                 }
             }
         }

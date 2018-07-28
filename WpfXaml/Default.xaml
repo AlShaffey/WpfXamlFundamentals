@@ -57,6 +57,7 @@
                     <MenuItem Header="XML Namespaces" x:Name="XmlNamespaces" Click="XmlNamespaces_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Collection Views" x:Name="CollectionViews" Click="CollectionViews_Click"  Foreground="Black"></MenuItem>
                     <MenuItem Header="Writing Data Sources" x:Name="WritingDataSources" Click="WritingDataSources_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Converters" x:Name="Converters" Click="Converters_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Core Types" Foreground="Red">
                 </MenuItem>

@@ -258,5 +258,11 @@ namespace WpfXaml
             var writingDataSources = new WritingDataSources();
             writingDataSources.Show();
         }
+
+        private void Converters_Click(object sender, RoutedEventArgs e)
+        {
+            var converters = new Converters();
+            converters.Show();
+        }
     }
 }
