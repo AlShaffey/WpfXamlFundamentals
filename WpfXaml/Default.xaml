@@ -64,6 +64,7 @@
                     <MenuItem Header="Control Templates" x:Name="ControlTemplates" Click="ControlTemplates_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Template Binding" x:Name="TemplateBinding" Click="TemplateBinding_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Triggers" x:Name="Triggers" Click="Triggers_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Trigger Targeting" x:Name="TriggerTargeting" Click="TriggerTargeting_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Resources" Foreground="Red">
                 </MenuItem>

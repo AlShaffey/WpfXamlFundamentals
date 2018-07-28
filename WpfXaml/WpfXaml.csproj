@@ -179,6 +179,9 @@
     <Compile Include="Triggers.xaml.cs">
       <DependentUpon>Triggers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TriggerTargeting.xaml.cs">
+      <DependentUpon>TriggerTargeting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Validation.xaml.cs">
       <DependentUpon>Validation.xaml</DependentUpon>
     </Compile>
@@ -398,6 +401,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Triggers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TriggerTargeting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

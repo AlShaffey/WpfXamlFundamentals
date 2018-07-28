@@ -288,5 +288,11 @@ namespace WpfXaml
             var triggers = new Triggers();
             triggers.Show();
         }
+
+        private void TriggerTargeting_Click(object sender, RoutedEventArgs e)
+        {
+            var triggerTargeting = new TriggerTargeting();
+            triggerTargeting.Show();
+        }
     }
 }
