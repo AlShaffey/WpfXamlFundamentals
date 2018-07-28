@@ -264,5 +264,11 @@ namespace WpfXaml
             var converters = new Converters();
             converters.Show();
         }
+
+        private void Validation_Click(object sender, RoutedEventArgs e)
+        {
+            var validation = new Validation();
+            validation.Show();
+        }
     }
 }

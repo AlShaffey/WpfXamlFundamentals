@@ -58,6 +58,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AgeCheckConverter.cs" />
+    <Compile Include="AgeRule.cs" />
     <Compile Include="Allignment.xaml.cs">
       <DependentUpon>Allignment.xaml</DependentUpon>
     </Compile>
@@ -168,6 +169,9 @@
     </Compile>
     <Compile Include="Transforms.xaml.cs">
       <DependentUpon>Transforms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.xaml.cs">
+      <DependentUpon>Validation.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewBox.xaml.cs">
       <DependentUpon>ViewBox.xaml</DependentUpon>
@@ -373,6 +377,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Transforms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Validation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

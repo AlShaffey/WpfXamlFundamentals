@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WpfXaml
 {
-    public class Person : INotifyPropertyChanged
+    public class Person : INotifyPropertyChanged, IDataErrorInfo
     {
         private double _age;
         public double Age
@@ -40,12 +40,33 @@ namespace WpfXaml
             }
         }
 
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        public string this[string columnName] => Validate(columnName);
+
+        public string Error => throw new NotImplementedException();
+
+        private string Validate(string columnName)
+        {
+            var result = string.Empty;
+
+            switch (columnName)
+            {
+                case nameof(Age):
+                    if (Name == "m.2" && Age >= 26 && Age <= 30)
+                    {
+                        result = $"{Name} should not be within (26 - 30) years old!";
+                    }
+                    break;
+                case nameof(Name): break;
+                default: throw new ArgumentException($"Unknown property: {columnName}, columnName");
+            }
+
+            return result;
         }
     }
 }

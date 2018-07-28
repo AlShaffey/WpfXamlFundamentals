@@ -1,0 +1,118 @@
+﻿<Window x:Class="WpfXaml.Validation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Validation" Height="450" Width="1200">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="4"></Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip" 
+                            Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <local:AgeCheckConverter x:Key="ageConverter"></local:AgeCheckConverter>
+        <!--<local:AgeRule-->
+        <DataTemplate DataType="{x:Type local:Person}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Name="labelName" Margin="3" Target="{Binding ElementName=textBoxName}">_Name</Label>
+                <TextBox Name="textBoxName" Margin="3" Grid.Column="1" Text="{Binding Name, ValidatesOnDataErrors=True}"></TextBox>
+                <Label Name="labelAge" Margin="3" Grid.Row="1" Target="{Binding ElementName=textBoxAge}">_Age</Label>
+                <TextBox Name="textBoxAge" Margin="3" Grid.Row="1" Grid.Column="1">
+                    <TextBox.Text>
+                        <Binding Path="Age" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True">
+                            <Binding.ValidationRules>
+                                <ExceptionValidationRule></ExceptionValidationRule>
+                                <local:AgeRule></local:AgeRule>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+            </Grid>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Age, Converter={StaticResource ageConverter}}" Value="True">
+                    <Setter TargetName="labelAge" Property="Background" Value="Orange"></Setter>
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="textBoxAge"
+                                                Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)"
+                                                To="Brown" Duration="0:0:1.5"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="textBoxAge"
+                                                Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)"
+                                                Duration="0:0:1.5"></ColorAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Window.Resources>
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--<Button Content="{Binding}"></Button>
+        <ContentControl Content="{Binding}"></ContentControl>-->
+                <ListBox ItemsSource="{Binding}"></ListBox>
+                <StackPanel Grid.Row="1">
+                    <Button Content="_Show" Margin="3" Click="Button_Click"></Button>
+                    <Button Content="_Change Age" Margin="3" Click="Button_Click_1"></Button>
+                </StackPanel>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Uses a data trigger that watches the resource object's Age property.</TextBlock>
+                <TextBlock>The trigger contains a setter which targets the element named labelAge.</TextBlock>
+                <TextBlock>The trigger will change that element background property to Orange whenever the trigger is applied (Age is 21 or below).</TextBlock>
+                <TextBlock>The trigger here is not a fixed value.</TextBlock>
+                <TextBlock>A converter (IValueConverter) class is used to implement a trigger over a range.</TextBlock>
+                <TextBlock>So, instead of checking the exact value of the Age text box, the converter convert method checks whether the text box contains value less than or equals 21 and then returns boolean."</TextBlock>
+                <TextBlock>Then the converter is used in the trigger.</TextBlock>
+                <TextBlock>Where the converter is registered as a static resource.</TextBlock>
+                <TextBlock>where the trigger looks for a value of True instead of exact 21 value.</TextBlock>
+                <TextBlock>So, the converter does the actual logic.</TextBlock>
+                <TextBlock>So, policy decisions are not put in XAML.</TextBlock>
+                <TextBlock>The trigger has an enter action which begins a storyboard when the trigger is applied.</TextBlock>
+                <TextBlock>The enter action has a single animation (color animation), which targets the Age text box, and its background color property, that is get animated over a 1.5 sec to Brown.</TextBlock>
+                <TextBlock>An exit action is added as a second animation, that animates back the Age text box background color to its Base value, by specifying nothing to the "To" property.</TextBlock>
+                <TextBlock>A validation rule is used to validate that the age is not between (22 - 25) inclusive, with a tooltip says "A person should not be within (22 - 25) years old!".</TextBlock>
+                <TextBlock>By inheriting ValidationRule class.</TextBlock>
+                <TextBlock>The rule is put in the middle of binding via property syntax.</TextBlock>
+                <TextBlock>If the validation rule is not valid, the converter doesn't get fired.</TextBlock>
+                <TextBlock>So, if the entered number is valid and fires the converter rules when it gets changed to invalid, the animation doesn't work, and vice versa.</TextBlock>
+                <TextBlock>To support multi-field based validation, IDataErrorInfo interface is used.</TextBlock>
+                <TextBlock>Where it acts as a source that can validate itself.</TextBlock>
+                <TextBlock>So, Person class - the source - has implemented the IDataErrorInfo interface.</TextBlock>
+                <TextBlock>Hence, the validation is pushed down to the data source rather than in XAML.</TextBlock>
+                <TextBlock>Where the validation rule is that, the m.2 person shouldn't have age between (26 - 30) inclusive, with a tooltip says "m.2 should not be within (26 - 30) years old!".</TextBlock>
+                <TextBlock>To use this, a style has been added to the textboxes, with triggers on a validation error, and applies the tooltip, and populates it with validation error message.</TextBlock>
+                <TextBlock>Also, ValidatesOnDataError property is enabled for the Textboxes, to force the use of IDataErrorInfo interface implementation.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
