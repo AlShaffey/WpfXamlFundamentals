@@ -282,5 +282,11 @@ namespace WpfXaml
             var templateBinding = new TemplateBinding();
             templateBinding.Show();
         }
+
+        private void Triggers_Click(object sender, RoutedEventArgs e)
+        {
+            var triggers = new Triggers();
+            triggers.Show();
+        }
     }
 }

@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfXaml.Triggers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="Triggers" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Button Width="70" Height="30">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Ellipse Fill="{TemplateBinding Background}"></Ellipse>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Orange"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="Black" ></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+                _Ok.
+            </Button>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A Control Template Triggers are used to change the button background accordingly.</TextBlock>
+                <TextBlock>The triggers are of Property Trigger type.</TextBlock>
+                <TextBlock>The 1st Triggers watches the IsMouseOver property.</TextBlock>
+                <TextBlock>Which, has a setter to set the button background to Orange.</TextBlock>
+                <TextBlock></TextBlock>
+                <TextBlock>The 2nd Triggers watches the IsPressed property.</TextBlock>
+                <TextBlock>Which, has a setter to set the button background to Black.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
