@@ -276,5 +276,11 @@ namespace WpfXaml
             var controlTemplates = new ControlTemplates();
             controlTemplates.Show();
         }
+
+        private void TemplateBinding_Click(object sender, RoutedEventArgs e)
+        {
+            var templateBinding = new TemplateBinding();
+            templateBinding.Show();
+        }
     }
 }

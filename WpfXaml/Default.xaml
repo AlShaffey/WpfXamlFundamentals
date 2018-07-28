@@ -62,6 +62,7 @@
                 </MenuItem>
                 <MenuItem Header="Templates" Foreground="Blue">
                     <MenuItem Header="Control Templates" x:Name="ControlTemplates" Click="ControlTemplates_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Template Binding" x:Name="TemplateBinding" Click="TemplateBinding_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Resources" Foreground="Red">
                 </MenuItem>
