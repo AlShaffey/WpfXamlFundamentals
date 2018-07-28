@@ -270,5 +270,11 @@ namespace WpfXaml
             var validation = new Validation();
             validation.Show();
         }
+
+        private void ControlTemplates_Click(object sender, RoutedEventArgs e)
+        {
+            var controlTemplates = new ControlTemplates();
+            controlTemplates.Show();
+        }
     }
 }

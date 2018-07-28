@@ -80,6 +80,9 @@
     <Compile Include="ContentAlignment.xaml.cs">
       <DependentUpon>ContentAlignment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlTemplates.xaml.cs">
+      <DependentUpon>ControlTemplates.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters.xaml.cs">
       <DependentUpon>Converters.xaml</DependentUpon>
     </Compile>
@@ -214,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlTemplates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

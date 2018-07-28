@@ -44,7 +44,7 @@
                     <MenuItem Header="Transforms" x:Name="Transforms" Click="Transforms_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Animation" x:Name="Animation" Click="Animation_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="Data Binding" Foreground="Blue">
+                <MenuItem Header="Data Binding" Foreground="Black">
                     <MenuItem Header="Explicit Data Source" x:Name="ExplicitDataSource" Click="ExplicitDataSource_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Explicit Data Source As Resource" x:Name="ExplicitDataSourceAsResource" Click="ExplicitDataSourceAsResource_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="With Data Context" x:Name="WithDataContext" Click="WithDataContext_Click" Foreground="Black"></MenuItem>
@@ -60,9 +60,8 @@
                     <MenuItem Header="Converters" x:Name="Converters" Click="Converters_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Validation" x:Name="Validation" Click="Validation_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="Core Types" Foreground="Red">
-                </MenuItem>
-                <MenuItem Header="Templates" Foreground="Red">
+                <MenuItem Header="Templates" Foreground="Blue">
+                    <MenuItem Header="Control Templates" x:Name="ControlTemplates" Click="ControlTemplates_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Resources" Foreground="Red">
                 </MenuItem>
