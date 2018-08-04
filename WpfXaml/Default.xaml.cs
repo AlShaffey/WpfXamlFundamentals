@@ -300,5 +300,11 @@ namespace WpfXaml
             var namedParts = new NamedParts();
             namedParts.Show();
         }
+
+        private void ContentControl_Click(object sender, RoutedEventArgs e)
+        {
+            var contentControl = new ContentControl();
+            contentControl.Show();
+        }
     }
 }

@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfXaml.ContentControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="ContentControl" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Button>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse x:Name="buttonFace" Margin="0,3,0,0" Fill="{TemplateBinding Background}" StrokeThickness="3" 
+                                     Stroke="Orange"></Ellipse>
+                            <Border Margin="7">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                                  Margin="{TemplateBinding Padding}" RecognizesAccessKey="True"></ContentPresenter>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+                _m.2
+            </Button>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Content control contract kind.</TextBlock>
+                <TextBlock>The contains an ellipse.</TextBlock>
+                <TextBlock>A content presenter is used to represent the content property.</TextBlock>
+                <TextBlock>Horizontal and vertical alignment properties of the content presenter are bound to the horizontal and vertical alignment property of the content.</TextBlock>
+                <TextBlock>By this, the word "m.2" is displayed.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
