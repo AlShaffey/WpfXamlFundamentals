@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfXaml.NamedParts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="NamedParts" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <ProgressBar Height="30" Width="150" Value="10" Maximum="100">
+                <ProgressBar.Template>
+                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                        <Grid>
+                            <Border Name="PART_Track" CornerRadius="3" BorderBrush="Orange" BorderThickness="3">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="Orange"></GradientStop>
+                                        <GradientStop Color="LightYellow" Offset="1"></GradientStop>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border Name="PART_Indicator" CornerRadius="3" Margin="1" Background="Yellow" BorderBrush="AliceBlue" BorderThickness="3" HorizontalAlignment="Left">                                
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </ProgressBar.Template>
+            </ProgressBar>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A progress bar with a control template.</TextBlock>
+                <TextBlock>Where template contract is of Named Parts kind.</TextBlock>
+                <TextBlock>Where 2 of the template elements have Names.</TextBlock>
+                <TextBlock>Those names are what the progress bar will look for.</TextBlock>
+                <TextBlock>PART_Track, which determines the area under which the indicator will sweep.</TextBlock>
+                <TextBlock>PART_Indicator, which the progress pubble resize.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

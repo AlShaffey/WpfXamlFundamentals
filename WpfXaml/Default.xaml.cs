@@ -294,5 +294,11 @@ namespace WpfXaml
             var triggerTargeting = new TriggerTargeting();
             triggerTargeting.Show();
         }
+
+        private void NamedParts_Click(object sender, RoutedEventArgs e)
+        {
+            var namedParts = new NamedParts();
+            namedParts.Show();
+        }
     }
 }

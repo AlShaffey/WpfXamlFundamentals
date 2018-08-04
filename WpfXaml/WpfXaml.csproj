@@ -138,6 +138,9 @@
     <Compile Include="MoreItemControls.xaml.cs">
       <DependentUpon>MoreItemControls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NamedParts.xaml.cs">
+      <DependentUpon>NamedParts.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Navigation.xaml.cs">
       <DependentUpon>Navigation.xaml</DependentUpon>
     </Compile>
@@ -314,6 +317,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MoreItemControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NamedParts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
