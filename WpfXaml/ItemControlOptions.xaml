@@ -1,0 +1,77 @@
+﻿<Window x:Class="WpfXaml.ItemControlOptions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="ItemControlOptions" Height="450" Width="1200">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type FontFamily}">
+            <TextBlock Text="{Binding}" FontFamily="{Binding}" FontSize="30"></TextBlock>
+        </DataTemplate>
+    </Window.Resources>
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ListBox ItemsSource="{x:Static Fonts.SystemFontFamilies}" Grid.Column="0" Grid.Row="0">
+                </ListBox>
+                <ListBox ItemsSource="{x:Static Fonts.SystemFontFamilies}" Grid.Column="0" Grid.Row="1">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                <ListBox ItemsSource="{x:Static Fonts.SystemFontFamilies}" Grid.Column="0" Grid.Row="2">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal"></VirtualizingStackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                <ListBox ItemsSource="{x:Static Fonts.SystemFontFamilies}" Grid.Column="0" Grid.Row="3" 
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>Item control template contract kind.</TextBlock>
+                <TextBlock>Here we are changing only the Item Panel template and not the whole control templates, and this is an exceptional capability of the Item Control.</TextBlock>
+                <TextBlock>Item Panel defines a template of the panel that arranges the item of the control.</TextBlock>
+                <TextBlock>By this, the control layout strategy can be changed, without changing anything else of the control.</TextBlock>
+                <TextBlock>The POC consists of 4 List Box controls that are all bound to a window resources data template of system font families.</TextBlock>
+                <TextBlock>1st</TextBlock>
+                <TextBlock>Uses the default Panel Template, that sorts the items vertically, with virtualization enabled.</TextBlock>
+                <TextBlock>To test virtualization, open the visual, you will find a few list item object for only the rendered items, and not for  the hidden ones.</TextBlock>
+                <TextBlock>This behavior remains with scrolling since WPF renders a new list for the displayed list and abandon the old one.</TextBlock>
+                <TextBlock>2nd</TextBlock>
+                <TextBlock>Uses Stack Panel as an Items Panel template, where items are sorted vertically, but virtualization is disabled.</TextBlock>
+                <TextBlock>Look at the virtual tree, you will find that there are a huge number of List Items correspond to each Font Family even if it is hidden.</TextBlock>
+                <TextBlock>This has a highly cosiderable effect on performance.</TextBlock>
+                <TextBlock>3rd</TextBlock>
+                <TextBlock>Uses a Virtualizing Stack  Panel, to consider the virtualization, and sorts the items horizontally.</TextBlock>
+                <TextBlock>The Virtualizing Stack Panel is the only built in panel that supports virtualization.</TextBlock>
+                <TextBlock>Agian visual tree will show few list items.</TextBlock>
+                <TextBlock>The cost of the virtualization can be found in the consistency of the scrollbar thumb.</TextBlock>
+                <TextBlock>Where WPF can not have a solid information about the size of all the items (displayed and hidden), so it tries to guess based on the displayed list by taking the average of what is displayed to calculate for the others.</TextBlock>
+                <TextBlock>As a consequence, the scrollbar thumb size gets changed with each scroll.</TextBlock>
+                <TextBlock>4th</TextBlock>
+                <TextBlock>Uses a Wrap Panel, with no horizontal scroll, to display the items side by side.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

@@ -306,5 +306,11 @@ namespace WpfXaml
             var contentControl = new ContentControl();
             contentControl.Show();
         }
+
+        private void ItemControlOptions_Click(object sender, RoutedEventArgs e)
+        {
+            var itemControlOptions = new ItemControlOptions();
+            itemControlOptions.Show();
+        }
     }
 }

@@ -67,6 +67,7 @@
                     <MenuItem Header="Trigger Targeting" x:Name="TriggerTargeting" Click="TriggerTargeting_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Named Parts" x:Name="NamedParts" Click="NamedParts_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Content Control" x:Name="ContentControl" Click="ContentControl_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Item Control Options" x:Name="ItemControlOptions" Click="ItemControlOptions_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Resources" Foreground="Red">
                 </MenuItem>
