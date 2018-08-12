@@ -70,6 +70,7 @@
                     <MenuItem Header="Item Control Options" x:Name="ItemControlOptions" Click="ItemControlOptions_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Item Control Full Template" x:Name="ItemControlFullTemplate" Click="ItemControlFullTemplate_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Headered Item Control" x:Name="HeaderedItemControl" Click="HeaderedItemControl_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Templates are Factories" x:Name="TemplatesAreFactories" Click="TemplatesAreFactories_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Resources" Foreground="Red">
                 </MenuItem>

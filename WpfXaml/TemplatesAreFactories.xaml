@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfXaml.TemplatesAreFactories"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="TemplatesAreFactories" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Button x:Name="btn">
+            </Button>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A control template as an ellipse is applied on a button via code behind.</TextBlock>
+                <TextBlock>By creating a control template object, that is targeting buttons.</TextBlock>
+                <TextBlock>Where the content of this template is Framework Element Factory of ellipse type.</TextBlock>
+                <TextBlock>Ellipse fill property is set via set value method of the Framework Element Factory.</TextBlock>
+                <TextBlock>Then, the visual tree of the template is get assigned to the factory.</TextBlock>
+                <TextBlock>Which in trun it is get assigned to the button template.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

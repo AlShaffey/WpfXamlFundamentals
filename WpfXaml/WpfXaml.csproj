@@ -179,6 +179,9 @@
     <Compile Include="TemplateBinding.xaml.cs">
       <DependentUpon>TemplateBinding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TemplatesAreFactories.xaml.cs">
+      <DependentUpon>TemplatesAreFactories.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TextInput.xaml.cs">
       <DependentUpon>TextInput.xaml</DependentUpon>
     </Compile>
@@ -412,6 +415,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TemplateBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TemplatesAreFactories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

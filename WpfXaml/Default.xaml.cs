@@ -324,5 +324,11 @@ namespace WpfXaml
             var headeredItemControl = new HeaderedItemControl();
             headeredItemControl.Show();
         }
+
+        private void TemplatesAreFactories_Click(object sender, RoutedEventArgs e)
+        {
+            var templatesAreFactories = new TemplatesAreFactories();
+            templatesAreFactories.Show();
+        }
     }
 }
