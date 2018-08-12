@@ -312,5 +312,11 @@ namespace WpfXaml
             var itemControlOptions = new ItemControlOptions();
             itemControlOptions.Show();
         }
+
+        private void ItemControlFullTemplate_Click(object sender, RoutedEventArgs e)
+        {
+            var itemControlFullTemplate = new ItemControlFullTemplate();
+            itemControlFullTemplate.Show();
+        }
     }
 }

@@ -68,6 +68,7 @@
                     <MenuItem Header="Named Parts" x:Name="NamedParts" Click="NamedParts_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Content Control" x:Name="ContentControl" Click="ContentControl_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Item Control Options" x:Name="ItemControlOptions" Click="ItemControlOptions_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Item Control Full Template" x:Name="ItemControlFullTemplate" Click="ItemControlFullTemplate_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Resources" Foreground="Red">
                 </MenuItem>
