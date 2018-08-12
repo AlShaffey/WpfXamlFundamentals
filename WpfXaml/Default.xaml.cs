@@ -318,5 +318,11 @@ namespace WpfXaml
             var itemControlFullTemplate = new ItemControlFullTemplate();
             itemControlFullTemplate.Show();
         }
+
+        private void HeaderedItemControl_Click(object sender, RoutedEventArgs e)
+        {
+            var headeredItemControl = new HeaderedItemControl();
+            headeredItemControl.Show();
+        }
     }
 }

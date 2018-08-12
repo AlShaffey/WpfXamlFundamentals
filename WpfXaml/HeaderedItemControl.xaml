@@ -1,0 +1,94 @@
+﻿<Window x:Class="WpfXaml.HeaderedItemControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="HeaderedItemControl" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.Resources>
+                    <XmlDataProvider x:Key="src" XPath="/myDoc/item">
+                        <x:XData>
+                            <myDoc xmlns="">
+                                <item title="One"></item>
+                                <item title="Two">
+                                    <item title="First child"></item>
+                                    <item title="Second child"></item>
+                                    <item title="Third child"></item>
+                                    <item title="Fourth child">
+                                        <item title="First grandchild"></item>
+                                        <item title="Second grandchild"></item>
+                                        <item title="Third grandchild"></item>
+                                    </item>
+                                </item>
+                                <item title="Three"></item>
+                                <item title="More"></item>
+                            </myDoc>
+                        </x:XData>
+                    </XmlDataProvider>
+                </Grid.Resources>
+                <TreeView DataContext="{StaticResource src}" ItemsSource="{Binding}">
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding XPath=item}">
+                            <TextBlock Text="{Binding XPath=@title}"></TextBlock>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                    <TreeView.Resources>
+                        <Style TargetType="{x:Type TreeViewItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                          IsChecked="{Binding Path=IsExpanded, 
+                                    RelativeSource={RelativeSource TemplatedParent}}"></CheckBox>
+                                            <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left">
+                                                <Rectangle Fill="Orange" RadiusX="7" RadiusY="5"></Rectangle>
+                                                <ContentPresenter Margin="3,0" Content="{Binding  XPath=@title}"></ContentPresenter>
+                                            </Grid>
+                                            <StackPanel IsItemsHost="True" x:Name="host" Margin="0,1" 
+                                            Grid.Row="1" Grid.Column="1">
+                                                <StackPanel.LayoutTransform>
+                                                    <RotateTransform Angle="-7"></RotateTransform>
+                                                </StackPanel.LayoutTransform>
+                                            </StackPanel>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsExpanded" Value="false">
+                                                <Setter TargetName="host" Property="Visibility" Value="Collapsed"></Setter>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TreeView.Resources>
+                </TreeView>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A tree view.</TextBlock>
+                <TextBlock>A stack panel is used as the item host, with the IsItemHost property set to true.</TextBlock>
+                <TextBlock>The panel itself has a transform that rotates the child item.</TextBlock>
+                <TextBlock>A content presenter is used to display the tree view item header property.</TextBlock>
+                <TextBlock>A checkbox is used as the toggle button.</TextBlock>
+                <TextBlock>Where data binding is used instead of template binding.</TextBlock>
+                <TextBlock>To link the tree view item to the IsExpanded property.</TextBlock>
+                <TextBlock>And this is used to provide a 2-way binding between the toggle button and the IsExpanded property.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

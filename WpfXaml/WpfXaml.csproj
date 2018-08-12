@@ -119,6 +119,9 @@
     <Compile Include="GridSplitter.xaml.cs">
       <DependentUpon>GridSplitter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HeaderedItemControl.xaml.cs">
+      <DependentUpon>HeaderedItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HierarchicalDataBinding.xaml.cs">
       <DependentUpon>HierarchicalDataBinding.xaml</DependentUpon>
     </Compile>
@@ -298,6 +301,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GroupingControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HeaderedItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
