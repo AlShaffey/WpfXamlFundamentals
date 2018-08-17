@@ -173,6 +173,9 @@
     <Compile Include="RangeControls.xaml.cs">
       <DependentUpon>RangeControls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReusableResources.xaml.cs">
+      <DependentUpon>ReusableResources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ScrollViewer.xaml.cs">
       <DependentUpon>ScrollViewer.xaml</DependentUpon>
     </Compile>
@@ -380,6 +383,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RangeControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReusableResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

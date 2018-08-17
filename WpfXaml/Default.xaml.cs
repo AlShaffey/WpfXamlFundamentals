@@ -330,5 +330,11 @@ namespace WpfXaml
             var templatesAreFactories = new TemplatesAreFactories();
             templatesAreFactories.Show();
         }
+
+        private void ReusableResources_Click(object sender, RoutedEventArgs e)
+        {
+            var reusableResources = new ReusableResources();
+            reusableResources.Show();
+        }
     }
 }
