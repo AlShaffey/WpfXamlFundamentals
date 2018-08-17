@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfXaml.DefiningResources"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="DefiningResources" Height="450" Width="800">
+    <Window.Resources>
+        <Color x:Key="m2Orange">Orange</Color>
+
+        <SolidColorBrush x:Key="OrangeBrush" Color="{StaticResource m2Orange}"></SolidColorBrush>
+
+        <ControlTemplate x:Key="CustomTemplate" TargetType="{x:Type Button}">
+            <Ellipse Fill="OrangeRed"></Ellipse>
+        </ControlTemplate>
+
+        <ObjectDataProvider x:Key="DataSource"></ObjectDataProvider>
+
+        <sys:String x:Key="Hello">Hello, World.</sys:String>
+
+        <x:Array x:Key="stringArray" Type="{x:Type sys:String}">
+            <sys:String>String</sys:String>
+            <sys:String>Array</sys:String>
+        </x:Array>
+
+        <Button x:Key="btn">BAD</Button>
+    </Window.Resources>
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>1- Few resource content examples:</TextBlock>
+                <TextBlock>2- Color.</TextBlock>
+                <TextBlock>3- Solid Color Brush.</TextBlock>
+                <TextBlock>4- Control Template.</TextBlock>
+                <TextBlock>5- Object Data Provider.</TextBlock>
+                <TextBlock>6- String.</TextBlock>
+                <TextBlock>Acts as a .net stream.</TextBlock>
+                <TextBlock>Where sys prefix is mapped to System namespace in mscorlib library.</TextBlock>
+                <TextBlock>7- Array of strings.</TextBlock>
+                <TextBlock>To demonstrate that WPF resource system doesn't requires resources to be WPF related!</TextBlock>
+                <TextBlock>8- Button (BAD).</TextBlock>
+                <TextBlock>BAD, because WPF is allowing the declaration of such type, it is a BAD idea.</TextBlock>
+                <TextBlock>Since the whole reason for resources is being sharable.</TextBlock>
+                <TextBlock>And buttons are not built for being shared.</TextBlock>
+                <TextBlock>Attempting to use one button in multiple places, will result in an exception.</TextBlock>
+                <TextBlock>So, even WPF resource system allows to have any type of objects as a resource, this doesn't mean that it should be used.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

@@ -336,5 +336,11 @@ namespace WpfXaml
             var reusableResources = new ReusableResources();
             reusableResources.Show();
         }
+
+        private void DefiningResources_Click(object sender, RoutedEventArgs e)
+        {
+            var definingResources = new DefiningResources();
+            definingResources.Show();
+        }
     }
 }
