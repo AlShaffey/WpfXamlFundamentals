@@ -75,6 +75,7 @@
                 <MenuItem Header="Resources" Foreground="Blue">
                     <MenuItem Header="Reusable Resources" x:Name="ReusableResources" Click="ReusableResources_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Defining Resources" x:Name="DefiningResources" Click="DefiningResources_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Resource References" x:Name="ResourceReferences" Click="ResourceReferences_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Text" Foreground="Red">
                 </MenuItem>

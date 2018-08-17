@@ -342,5 +342,11 @@ namespace WpfXaml
             var definingResources = new DefiningResources();
             definingResources.Show();
         }
+
+        private void ResourceReferences_Click(object sender, RoutedEventArgs e)
+        {
+            var resourceReferences = new ResourceReferences();
+            resourceReferences.Show();
+        }
     }
 }
