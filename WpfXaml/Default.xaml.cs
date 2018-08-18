@@ -348,5 +348,17 @@ namespace WpfXaml
             var resourceReferences = new ResourceReferences();
             resourceReferences.Show();
         }
+
+        private void ResourceHierarchy_Click(object sender, RoutedEventArgs e)
+        {
+            var resourceHierarchy = new ResourceHierarchy();
+            resourceHierarchy.Show();
+        }
+
+        private void AlternateReferenceSyntax_Click(object sender, RoutedEventArgs e)
+        {
+            var alternateReferenceSyntax = new AlternateReferenceSyntax();
+            alternateReferenceSyntax.Show();
+        }
     }
 }

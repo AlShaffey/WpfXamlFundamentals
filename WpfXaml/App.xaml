@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:WpfXaml"
              StartupUri="Default.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="OrangeBrush" Color="OrangeRed"></SolidColorBrush>
+        <SolidColorBrush x:Key="RedBrush" Color="DarkRed"></SolidColorBrush>
     </Application.Resources>
 </Application>

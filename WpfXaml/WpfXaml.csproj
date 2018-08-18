@@ -62,6 +62,9 @@
     <Compile Include="Allignment.xaml.cs">
       <DependentUpon>Allignment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AlternateReferenceSyntax.xaml.cs">
+      <DependentUpon>AlternateReferenceSyntax.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Animation.xaml.cs">
       <DependentUpon>Animation.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,9 @@
     <Compile Include="RangeControls.xaml.cs">
       <DependentUpon>RangeControls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResourceHierarchy.xaml.cs">
+      <DependentUpon>ResourceHierarchy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ResourceReferences.xaml.cs">
       <DependentUpon>ResourceReferences.xaml</DependentUpon>
     </Compile>
@@ -225,6 +231,10 @@
       <DependentUpon>XmlNamespaces.xaml</DependentUpon>
     </Compile>
     <Page Include="Allignment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AlternateReferenceSyntax.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -393,6 +403,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RangeControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceHierarchy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
