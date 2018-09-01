@@ -360,5 +360,11 @@ namespace WpfXaml
             var alternateReferenceSyntax = new AlternateReferenceSyntax();
             alternateReferenceSyntax.Show();
         }
+
+        private void ImplicitResourceUsage_Click(object sender, RoutedEventArgs e)
+        {
+            var implicitResourceUsage = new ImplicitResourceUsage();
+            implicitResourceUsage.Show();
+        }
     }
 }

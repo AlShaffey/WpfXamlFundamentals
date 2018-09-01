@@ -78,6 +78,7 @@
                     <MenuItem Header="Resource References" x:Name="ResourceReferences" Click="ResourceReferences_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Resource Hierarchy" x:Name="ResourceHierarchy" Click="ResourceHierarchy_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Alternate Reference Syntax" x:Name="AlternateReferenceSyntax" Click="AlternateReferenceSyntax_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Implicit Resource Usage" x:Name="ImplicitResourceUsage" Click="ImplicitResourceUsage_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Text" Foreground="Red">
                 </MenuItem>
