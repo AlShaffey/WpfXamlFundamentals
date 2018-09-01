@@ -156,6 +156,9 @@
     <Compile Include="MenusAndCommands.xaml.cs">
       <DependentUpon>MenusAndCommands.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MergingResources.xaml.cs">
+      <DependentUpon>MergingResources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MoreItemControls.xaml.cs">
       <DependentUpon>MoreItemControls.xaml</DependentUpon>
     </Compile>
@@ -250,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BuiltInCommand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ButtonTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -374,6 +381,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MenusAndCommands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MergingResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

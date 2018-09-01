@@ -366,5 +366,11 @@ namespace WpfXaml
             var implicitResourceUsage = new ImplicitResourceUsage();
             implicitResourceUsage.Show();
         }
+
+        private void MergingResources_Click(object sender, RoutedEventArgs e)
+        {
+            var mergingResources = new MergingResources();
+            mergingResources.Show();
+        }
     }
 }

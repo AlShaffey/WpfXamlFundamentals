@@ -4,7 +4,12 @@
              xmlns:local="clr-namespace:WpfXaml"
              StartupUri="Default.xaml">
     <Application.Resources>
-        <SolidColorBrush x:Key="OrangeBrush" Color="OrangeRed"></SolidColorBrush>
-        <SolidColorBrush x:Key="RedBrush" Color="DarkRed"></SolidColorBrush>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ButtonTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="OrangeBrush" Color="OrangeRed"/>
+            <SolidColorBrush x:Key="RedBrush" Color="DarkRed"/>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
