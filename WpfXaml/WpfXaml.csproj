@@ -68,6 +68,9 @@
     <Compile Include="Animation.xaml.cs">
       <DependentUpon>Animation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BinaryResources.xaml.cs">
+      <DependentUpon>BinaryResources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingToCollection.xaml.cs">
       <DependentUpon>BindingToCollection.xaml</DependentUpon>
     </Compile>
@@ -245,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Animation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BinaryResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -550,6 +557,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ALL.png" />
+    <Resource Include="Images\OpenSource.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

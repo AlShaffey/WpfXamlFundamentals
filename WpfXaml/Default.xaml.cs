@@ -372,5 +372,11 @@ namespace WpfXaml
             var mergingResources = new MergingResources();
             mergingResources.Show();
         }
+
+        private void BinaryResources_Click(object sender, RoutedEventArgs e)
+        {
+            var binaryResources = new BinaryResources();
+            binaryResources.Show();
+        }
     }
 }

@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfXaml.BinaryResources"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        mc:Ignorable="d"
+        Title="BinaryResources" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image x:Name="img" Source="/Images/OpenSource.jpeg" Grid.Row="0"></Image>
+                <Button Click="Button_Click" Grid.Row="1" Height="50" Width="210">
+                    Show the embedded resource</Button>
+                <Image x:Name="embdedImg" Grid.Row="2"></Image>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>There are 2 images compiled as resources:</TextBlock>
+                <TextBlock>The Open Source one has a Resource build action.</TextBlock>
+                <TextBlock>The ALL one has an Embedded Resource build action.</TextBlock>
+                <TextBlock>The image element at the 1st row has the source property refers to the Open Source image.</TextBlock>
+                <TextBlock>The Show the embedded resource button loads the ALL image programmatically when it gets clicked, at the 3rd row.</TextBlock>
+                <TextBlock>By getting the current assembly.</TextBlock>
+                <TextBlock>Where the GetManifestResourceStream is called against the assembly to retrieve the ALL embedded resource stream.</TextBlock>
+                <TextBlock>The stream is fed to a PNG decoder.</TextBlock>
+                <TextBlock>Which is finally loaded as a source of the image element.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
