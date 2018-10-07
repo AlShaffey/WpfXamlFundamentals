@@ -378,5 +378,11 @@ namespace WpfXaml
             var textBlock = new TextBlock();
             textBlock.Show();
         }
+
+        private void InlineTextHints_Click(object sender, RoutedEventArgs e)
+        {
+            var inlineTextHints = new InlineTextHints();
+            inlineTextHints.Show();
+        }
     }
 }

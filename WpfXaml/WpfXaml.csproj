@@ -140,6 +140,9 @@
     <Compile Include="ImplicitResourceUsage.xaml.cs">
       <DependentUpon>ImplicitResourceUsage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InlineTextHints.xaml.cs">
+      <DependentUpon>InlineTextHints.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ItemContainers.xaml.cs">
       <DependentUpon>ItemContainers.xaml</DependentUpon>
     </Compile>
@@ -366,6 +369,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ImplicitResourceUsage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InlineTextHints.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

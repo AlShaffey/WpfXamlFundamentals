@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfXaml.InlineTextHints"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="InlineTextHints" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <StackPanel>
+                <TextBlock FontSize="44">
+                Windows <Italic>Presentation</Italic> Foundation.
+                </TextBlock>
+                <TextBlock>This is exactly the same as</TextBlock>
+                <TextBlock Text="&lt;Run Text=&quot;Windows&quot;&gt;&lt;/Run&gt; &lt;Italic&gt;&lt;Run Text=&quot;Presentation&quot;&gt;&lt;/Run&gt;&lt;/Italic&gt; &lt;Run Text=&quot;Foundation.&quot;&gt;&lt;/Run&gt;"></TextBlock>
+                <TextBlock FontSize="44">
+                <Run Text="Windows"></Run> <Italic><Run Text="Presentation"></Run></Italic> <Run Text="Foundation."></Run>
+                </TextBlock>
+            </StackPanel>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>The 1st Windows Presentation Foundation is written without specifying Run inline element.</TextBlock>
+                <TextBlock>The 2nd Windows Presentation Foundation is written with explicitly specifying the Run inline element.</TextBlock>
+                <TextBlock>Like: &lt;Run Text=&quot;Windows&quot;&gt;&lt;/Run&gt; &lt;Italic&gt;&lt;Run Text=&quot;Presentation&quot;&gt;&lt;/Run&gt;&lt;/Italic&gt; &lt;Run Text=&quot;Foundation.&quot;&gt;&lt;/Run&gt;</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
