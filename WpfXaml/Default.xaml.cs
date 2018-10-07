@@ -378,5 +378,11 @@ namespace WpfXaml
             var binaryResources = new BinaryResources();
             binaryResources.Show();
         }
+
+        private void ImageSource_Click(object sender, RoutedEventArgs e)
+        {
+            var imageSource = new ImageSource();
+            imageSource.Show();
+        }
     }
 }

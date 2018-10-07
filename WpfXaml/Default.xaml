@@ -81,6 +81,7 @@
                     <MenuItem Header="Implicit Resource Usage" x:Name="ImplicitResourceUsage" Click="ImplicitResourceUsage_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Merging Resources" x:Name="MergingResources" Click="MergingResources_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Binary Resources" x:Name="BinaryResources" Click="BinaryResources_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Image Source" x:Name="ImageSource" Click="ImageSource_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Text" Foreground="Red">
                 </MenuItem>

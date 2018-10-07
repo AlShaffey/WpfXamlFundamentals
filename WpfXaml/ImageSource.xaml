@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfXaml.ImageSource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:m="clr-namespace:WpfXaml.Masters"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="ImageSource" Height="450" Width="800">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image 
+                    Source="D:\Integrant\CareerDevelopmentPlan\WPF\Solutions\WpfXamlFundamentals\WpfXaml\Images\ALL.png" 
+                    Grid.Column="0" Grid.Row="0"></Image>
+                <Image Source="Images\OpenSource.jpeg" Grid.Column="1" Grid.Row="0"></Image>
+            </Grid>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <ListBox>
+                <TextBlock>The image at the left is referenced using an Absolute URL.</TextBlock>
+                <TextBlock>The image at the right is referenced using a Relative URL.</TextBlock>
+            </ListBox>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
