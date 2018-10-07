@@ -72,7 +72,7 @@
                     <MenuItem Header="Headered Item Control" x:Name="HeaderedItemControl" Click="HeaderedItemControl_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Templates are Factories" x:Name="TemplatesAreFactories" Click="TemplatesAreFactories_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="Resources" Foreground="Blue">
+                <MenuItem Header="Resources" Foreground="Black">
                     <MenuItem Header="Reusable Resources" x:Name="ReusableResources" Click="ReusableResources_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Defining Resources" x:Name="DefiningResources" Click="DefiningResources_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Resource References" x:Name="ResourceReferences" Click="ResourceReferences_Click" Foreground="Black"></MenuItem>
@@ -83,7 +83,8 @@
                     <MenuItem Header="Binary Resources" x:Name="BinaryResources" Click="BinaryResources_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Image Source" x:Name="ImageSource" Click="ImageSource_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="Text" Foreground="Red">
+                <MenuItem Header="Text" Foreground="Blue">
+                    <MenuItem Header="Text Block" x:Name="TextBlock" Click="TextBlock_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
             </Menu>
             <TextBlock>
