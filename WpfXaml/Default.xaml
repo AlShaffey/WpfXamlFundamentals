@@ -90,6 +90,7 @@
                     <MenuItem Header="Paragraph" x:Name="Paragraph" Click="Paragraph_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Section" x:Name="Section" Click="Section_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="List" x:Name="List" Click="List_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Table" x:Name="Table" Click="Table_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
             </Menu>
             <TextBlock>

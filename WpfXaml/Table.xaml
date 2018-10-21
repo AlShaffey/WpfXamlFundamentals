@@ -1,0 +1,93 @@
+﻿<Window x:Class="WpfXaml.Table"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Table" Height="450" Width="800"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <FlowDocument>
+                <Table>
+                    <TableRowGroup>
+                        <TableRow Background="Orange">
+                            <TableCell ColumnSpan="3" TextAlignment="Center">
+                                <Paragraph FontSize="23pt" FontWeight="DemiBold">WPF Instructors</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow Background="AliceBlue" FontSize="16pt">
+                            <TableCell>
+                                <Paragraph>Name</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Age</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Favorite Color</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>Muhammad</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>34</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>OrangeColor</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow Background="AntiqueWhite">
+                            <TableCell>
+                                <Paragraph>Maher</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>35</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Aqua</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>Moursy</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>36</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Brown</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow Background="Beige">
+                            <TableCell ColumnSpan="3" TextAlignment="Left">
+                                <Paragraph FontSize="7pt" FontWeight="ExtraLight">Information may not be strictly accurate.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A flow document of table element.</TextBlock>
+                <TextBlock>The table is consisting of 6 rows.</TextBlock>
+                <TextBlock>The 1st row represents the header.</TextBlock>
+                <TextBlock>It has an Orange background.</TextBlock>
+                <TextBlock>Its cell is spanned across 3 columns.</TextBlock>
+                <TextBlock>And its text-align is set to center.</TextBlock>
+                <TextBlock>Which contains a paragraph of font size = 23pt.</TextBlock>
+                <TextBlock>And font weight = DemiBold.</TextBlock>
+                <TextBlock>Then, another row that represents a column header.</TextBlock>
+                <TextBlock>Of background color = AliceBlue and font size = 16pt.</TextBlock>
+                <TextBlock>The next 3 rows are the data rows.</TextBlock>
+                <TextBlock>Where odd and even rows are decremented by AntiqueWhite color for even rows.</TextBlock>
+                <TextBlock>And finally a table footer.</TextBlock>
+                <TextBlock>Of font size = 7pt and font weight = ExtraLight.</TextBlock>
+                <TextBlock>To indicate that the given information may not be accurate.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

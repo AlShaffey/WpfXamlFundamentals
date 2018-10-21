@@ -408,5 +408,11 @@ namespace WpfXaml
             var list = new List();
             list.Show();
         }
+
+        private void Table_Click(object sender, RoutedEventArgs e)
+        {
+            var table = new Table();
+            table.Show();
+        }
     }
 }
