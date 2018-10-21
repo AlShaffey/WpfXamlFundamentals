@@ -396,5 +396,11 @@ namespace WpfXaml
             var paragraph = new Paragraph();
             paragraph.Show();
         }
+
+        private void Section_Click(object sender, RoutedEventArgs e)
+        {
+            var section = new Section();
+            section.Show();
+        }
     }
 }

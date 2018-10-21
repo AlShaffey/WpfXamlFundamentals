@@ -212,6 +212,9 @@
     <Compile Include="ScrollViewer.xaml.cs">
       <DependentUpon>ScrollViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Section.xaml.cs">
+      <DependentUpon>Section.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TemplateBinding.xaml.cs">
       <DependentUpon>TemplateBinding.xaml</DependentUpon>
     </Compile>
@@ -475,6 +478,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ScrollViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Section.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
