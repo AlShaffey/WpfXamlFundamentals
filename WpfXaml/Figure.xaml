@@ -42,7 +42,7 @@ Test Duration:	0:00:00.162172
                 <TextBlock>A flow document of a paragraph, that has a figure followed by some normal content.</TextBlock>
                 <TextBlock>The figure has the horizontal anchor set to column center.</TextBlock>
                 <TextBlock>And the vertical anchor set to content bottom.</TextBlock>
-                <TextBlock>The figure contains a grid that has an image and an image figure information.</TextBlock>
+                <TextBlock>The figure contains a grid that has an image and an image figure information, which is wrapped in a BlockUIContainer.</TextBlock>
             </StackPanel>
         </m:MasterControl.Description>
     </m:MasterControl>

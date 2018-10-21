@@ -41,7 +41,7 @@ Test Duration:	0:00:00.162172
             <StackPanel>
                 <TextBlock>A flow document of a paragraph, that has a floater followed by some normal content.</TextBlock>
                 <TextBlock>The floater has the horizontal alignment set to center.</TextBlock>
-                <TextBlock>The floater contains a grid that has an image and an image figure information.</TextBlock>
+                <TextBlock>The floater contains a grid that has an image and an image figure information, which is wrapped in a BlockUIContainer.</TextBlock>
             </StackPanel>
         </m:MasterControl.Description>
     </m:MasterControl>
