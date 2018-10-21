@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfXaml.Paragraph"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Paragraph" Height="450" Width="800"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <FlowDocument>
+                <Paragraph>This is a paragraph.</Paragraph>
+                <Paragraph>This is another paragraph. Notice how it starts a new line. There is also some space between this one and the previous one.</Paragraph>
+            </FlowDocument>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>The window contains 2 paragraphs.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

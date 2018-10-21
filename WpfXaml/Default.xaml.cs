@@ -390,5 +390,11 @@ namespace WpfXaml
             var documentViewerControls = new DocumentViewerControls();
             documentViewerControls.Show();
         }
+
+        private void Paragraph_Click(object sender, RoutedEventArgs e)
+        {
+            var paragraph = new Paragraph();
+            paragraph.Show();
+        }
     }
 }
