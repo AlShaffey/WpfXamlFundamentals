@@ -414,5 +414,11 @@ namespace WpfXaml
             var table = new Table();
             table.Show();
         }
+
+        private void Floater_Click(object sender, RoutedEventArgs e)
+        {
+            var floater = new Floater();
+            floater.Show();
+        }
     }
 }
