@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfXaml.Typography"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Typography" Height="450" Width="800"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <StackPanel>
+                <TextBlock FontFamily="Palatino Linotype" 
+                           Typography.DiscretionaryLigatures="True"
+                           Typography.ContextualLigatures="True" Typography.StandardLigatures="True">
+                    Quite Effective Find</TextBlock>
+                <TextBlock Typography.Capitals="SmallCaps">Hellow, world!</TextBlock>
+                <TextBlock Typography.Fraction="Slashed">1/2 + 1/4 = 3/4</TextBlock>
+                <TextBlock Typography.NumeralStyle="Lining">1234567</TextBlock>
+                <TextBlock Typography.NumeralStyle="OldStyle">1234567</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>The window contains a list of text blocks that have different Typography configurations.</TextBlock>
+                <TextBlock>The 1st contains different Ligature configurations.</TextBlock>
+                <TextBlock>The 2nd one has the capital typography set to small caps style.</TextBlock>
+                <TextBlock>The 3rd one has the fraction typography set to slashed.</TextBlock>
+                <TextBlock>The 4th one has the numeral style typography set to the lining.</TextBlock>
+                <TextBlock>While the 5th has the numeral style typography set to the old style.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

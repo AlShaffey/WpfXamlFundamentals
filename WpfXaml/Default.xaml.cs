@@ -426,5 +426,11 @@ namespace WpfXaml
             var figure = new Figure();
             figure.Show();
         }
+
+        private void Typography_Click(object sender, RoutedEventArgs e)
+        {
+            var typography = new Typography();
+            typography.Show();
+        }
     }
 }
