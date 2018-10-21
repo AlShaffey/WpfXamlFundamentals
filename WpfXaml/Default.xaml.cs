@@ -402,5 +402,11 @@ namespace WpfXaml
             var section = new Section();
             section.Show();
         }
+
+        private void List_Click(object sender, RoutedEventArgs e)
+        {
+            var list = new List();
+            list.Show();
+        }
     }
 }

@@ -89,6 +89,7 @@
                     <MenuItem Header="Document Viewer Controls" x:Name="DocumentViewerControls" Click="DocumentViewerControls_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Paragraph" x:Name="Paragraph" Click="Paragraph_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Section" x:Name="Section" Click="Section_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="List" x:Name="List" Click="List_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
             </Menu>
             <TextBlock>
