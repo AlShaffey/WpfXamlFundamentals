@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfXaml.Figure"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfXaml"
+        mc:Ignorable="d"
+        Title="Figure" Height="450" Width="800"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <FlowDocument>
+                <Paragraph>
+                    <Figure HorizontalAnchor="ColumnCenter" VerticalAnchor="ContentBottom">
+                        <BlockUIContainer>
+                            <Border BorderBrush="Orange" BorderThickness="3" Padding="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="/Images/OpenSource.jpeg" Grid.Row="0"></Image>
+                                    <TextBlock Margin="7" FontStyle="Oblique" FontSize="12" Grid.Row="1" 
+                                               HorizontalAlignment="Left" TextWrapping="Wrap" 
+                                               TextAlignment="Justify">
+                                        Figure 1: ALL
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </BlockUIContainer>
+                    </Figure>
+                    Test Name:	AddLog_P_DebugTest
+Test FullName:	RSP.Log.UnitTest.MsTest.LoggerTest.LogLevelTest.AddLog_P_DebugTest
+Test Source:	D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.MsTest\LoggerTest\LogLevelTest.cs : line 13
+Test Outcome:	Failed
+Test Duration:	0:00:00.162172
+                </Paragraph>
+            </FlowDocument>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>A flow document of a paragraph, that has a figure followed by some normal content.</TextBlock>
+                <TextBlock>The figure has the horizontal anchor set to column center.</TextBlock>
+                <TextBlock>And the vertical anchor set to content bottom.</TextBlock>
+                <TextBlock>The figure contains a grid that has an image and an image figure information.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>

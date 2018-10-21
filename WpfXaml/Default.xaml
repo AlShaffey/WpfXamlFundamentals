@@ -92,6 +92,7 @@
                     <MenuItem Header="List" x:Name="List" Click="List_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Table" x:Name="Table" Click="Table_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Floater" x:Name="Floater" Click="Floater_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Figure" x:Name="Figure" Click="Figure_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
             </Menu>
             <TextBlock>

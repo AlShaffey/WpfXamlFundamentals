@@ -420,5 +420,11 @@ namespace WpfXaml
             var floater = new Floater();
             floater.Show();
         }
+
+        private void Figure_Click(object sender, RoutedEventArgs e)
+        {
+            var figure = new Figure();
+            figure.Show();
+        }
     }
 }

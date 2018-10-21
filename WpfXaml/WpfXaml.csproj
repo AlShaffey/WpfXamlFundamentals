@@ -125,6 +125,9 @@
     <Compile Include="ExplicitDataSourceAsResource.xaml.cs">
       <DependentUpon>ExplicitDataSourceAsResource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Figure.xaml.cs">
+      <DependentUpon>Figure.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Floater.xaml.cs">
       <DependentUpon>Floater.xaml</DependentUpon>
     </Compile>
@@ -363,6 +366,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ExplicitDataSourceAsResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Figure.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
