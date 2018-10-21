@@ -113,6 +113,9 @@
     <Compile Include="DefiningResources.xaml.cs">
       <DependentUpon>DefiningResources.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DocumentViewerControls.xaml.cs">
+      <DependentUpon>DocumentViewerControls.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EventRouting.xaml.cs">
       <DependentUpon>EventRouting.xaml</DependentUpon>
     </Compile>
@@ -329,6 +332,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Designers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DocumentViewerControls.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

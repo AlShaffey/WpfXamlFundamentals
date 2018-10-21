@@ -86,6 +86,7 @@
                 <MenuItem Header="Text" Foreground="Blue">
                     <MenuItem Header="Text Block" x:Name="TextBlock" Click="TextBlock_Click" Foreground="Black"></MenuItem>
                     <MenuItem Header="Inline Text Hints" x:Name="InlineTextHints" Click="InlineTextHints_Click" Foreground="Black"></MenuItem>
+                    <MenuItem Header="Document Viewer Controls" x:Name="DocumentViewerControls" Click="DocumentViewerControls_Click" Foreground="Black"></MenuItem>
                 </MenuItem>
             </Menu>
             <TextBlock>

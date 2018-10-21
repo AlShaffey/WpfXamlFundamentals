@@ -384,5 +384,11 @@ namespace WpfXaml
             var inlineTextHints = new InlineTextHints();
             inlineTextHints.Show();
         }
+
+        private void DocumentViewerControls_Click(object sender, RoutedEventArgs e)
+        {
+            var documentViewerControls = new DocumentViewerControls();
+            documentViewerControls.Show();
+        }
     }
 }

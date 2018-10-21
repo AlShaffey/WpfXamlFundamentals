@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfXaml.DocumentViewerControls"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfXaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DocumentViewerControls"
+        xmlns:m="clr-namespace:WpfXaml.Masters">
+
+    <m:MasterControl>
+        <m:MasterControl.Content>
+            <Button>
+                <FlowDocument>
+                    <Paragraph>Test Name:	AddLog_P_DebugTest
+Test FullName:	RSP.Log.UnitTest.MsTest.LoggerTest.LogLevelTest.AddLog_P_DebugTest
+Test Source:	D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.MsTest\LoggerTest\LogLevelTest.cs : line 13
+Test Outcome:	Failed
+Test Duration:	0:00:00.162172</Paragraph>
+                    <Paragraph>Result StackTrace:	
+at Ontellus.RSP.Testing.Exceptions.RSPAssertionException.Complete(ID parentId) in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Ontellus\Testing\Ontellus.RSP.Testing.Exception\RSPAssertionException.cs:line 153
+   at Ontellus.RSP.Testing.Exceptions.RSPAssertionException.UnitOfWork_UnitOfWorkCompleted(Object sender, UnitOfWorkDoneEventArgs e) in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Ontellus\Testing\Ontellus.RSP.Testing.Exception\RSPAssertionException.cs:line 126
+   at Ontellus.RSP.Testing.WorkUnit.UnitOfWork.CompleteWorkUnit() in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Ontellus\Testing\Ontellus.RSP.Testing.WorkUnit\UnitOfWork.cs:line 199
+   at RSP.Log.UnitTest.TL.LogTL.AddLog_P_LogLevelTest(LogGrade logGrade) in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.TL\LogTL.cs:line 114
+   at RSP.Log.UnitTest.MsTest.LoggerTest.LogLevelTest.AddLog_P_DebugTest() in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.MsTest\LoggerTest\LogLevelTest.cs:line 15
+Result Message:	
+Test method RSP.Log.UnitTest.MsTest.LoggerTest.LogLevelTest.AddLog_P_DebugTest threw exception: 
+System.Exception: 
+~~~~~~~~~~~~~~~~~
+Object reference not set to an instance of an object.</Paragraph>
+                    <Paragraph>at RSP.Log.UnitTest.Model.Message.GetHashCode() in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.Model\Message.cs:line 24
+   at RSP.Log.UnitTest.Model.LogEntry.GetHashCode() in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.Model\LogEntry.cs:line 33
+   at System.Collections.Generic.ObjectEqualityComparer`1.GetHashCode(T obj)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreUnique(ICollection collection, String message, Object[] parameters)
+   at Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert.AllItemsAreUnique(ICollection collection)
+   at RSP.Log.UnitTest.MsTest.Asserters.EnumerableAssertMsTest.AssertAllAreUnique(IEnumerable enumerable) in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.MsTest\Asserters\EnumerableAssertMsTest.cs:line 26
+   at Ontellus.RSP.Testing.Asserter.Extensions.EnumerableAverExt.AssertAllAreUnique(IEnumerable enumerable) in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Ontellus\Testing\Ontellus.RSP.Testing.Asserter\Extensions\EnumerableAverExt.cs:line 35
+   at RSP.Log.UnitTest.TL.LogTL.
+                        &lt;	&gt;c.
+                            &lt;AssertSingleLog&gt;b__9_1() in D:\RSP\Code\RSP\Code\RSP\Branches\Initial Phase\RSP Backoffice-Sprint 7\Logging\Testing\RSP.Log.UnitTest.TL\LogTL.cs:line 135
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+                    </Paragraph>
+                </FlowDocument>
+            </Button>
+        </m:MasterControl.Content>
+        <m:MasterControl.Description>
+            <StackPanel>
+                <TextBlock>The window is consisting of a single button.</TextBlock>
+                <TextBlock>The button has a Flow Document as a content.</TextBlock>
+                <TextBlock>Then flow document is consisting of paragraphs.</TextBlock>
+                <TextBlock>So, an implicit Flow Document Reader is added to view the flow document.</TextBlock>
+            </StackPanel>
+        </m:MasterControl.Description>
+    </m:MasterControl>
+</Window>
